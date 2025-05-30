@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crishamae Beach Resort</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    header h1 {
+      font-size: 4em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: #0077b6;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery img,
+    .gallery video {
+      width: 100%;
+      max-width: 350px;
+      margin: 10px;
+      border-radius: 8px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      padding: 10px;
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #023e8a;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    #info ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1em;
+    }
+
+    #info ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #info ul li:last-child {
+      border-bottom: none;
+    }
+
+    #info a {
+      color: #0077b6;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .gallery img, .gallery video {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#info">Info</a>
+    <a href="#contact">Book Now</a>
+  </nav>
+
+  <header>
+    <h1>Crishamae Beach Resort</h1>
+    <p>Relax. Rejuvenate. Rediscover Paradise.</p>
+  </header>
+
+  <section id="about">
+    <h2>About Our Resort</h2>
+    <p>
+      Welcome to Crishamae Beach Resort!<br><br>
+      Enjoy a relaxing stay in our cozy beach cottages, just steps away from the sea.
+      For some fun and adventure, hop on a banana boat ride with family or friends!<br><br>
+      Perfect for a quick getaway — simple, fun, and right by the water.
+    </p>
+  </section>
+
+  <section id="gallery">
+    <h2>Resort Gallery</h2>
+    <div class="gallery">
+      <!-- Replace with your own hosted image and video URLs -->
+      <img src="https://raw.githubusercontent.com/kerbyy-kerbs/pachry/refs/heads/main/image1pachry.jpeg" alt="Sunset beach">
+      <img src="https://raw.githubusercontent.com/kerbyy-kerbs/pachry/refs/heads/main/image2pachry.jpeg" alt="Cottage view">
+      <img src="https://raw.githubusercontent.com/kerbyy-kerbs/pachry/refs/heads/main/image3pachry.jpeg" alt="Banana boat fun">
+
+      <video controls src="https://www.dl.dropboxusercontent.com/scl/fi/hbglhxsilspnnv1zgg5rb/Messenger_creation_4508BEA0-F855-4D8B-9015-C85098F82267.mp4?rlkey=gcevqe576mcdie1fpeabp04iz"></video>
+      <video controls src="https://www.dl.dropboxusercontent.com/scl/fi/v9r6d564o59y0zxmmloj6/Messenger_creation_825872ED-E114-44CC-9346-4E1ABE69AECC.mp4?rlkey=rt6zqykauywbqwbl96do0egm2"></video>
+    </div>
+  </section>
+
+  <section id="info">
+    <h2>Resort Information</h2>
+    <ul>
+      <li><strong>Name of Tourist Spot:</strong> Crishamae Beach Resort</li>
+      <li><strong>Location:</strong> Lower Bayao, Purok Bangus</li>
+      <li><strong>Type of Attraction:</strong> Beach</li>
+      <li><strong>Fees and Charges:</strong> ₱400 (Cottage rental)</li>
+      <li><strong>Entrance Fee:</strong> No</li>
+      <li><strong>Additional Fees (e.g. Parking):</strong> No</li>
+      <li><strong>Open Daily:</strong> 6:00 AM</li>
+      <li><strong>Close Daily:</strong> 9:00 PM</li>
+      <li><strong>Overnight Stay:</strong> Not allowed</li>
+      <li><strong>Safety:</strong> Lifeguard or security personnel on duty</li>
+      <li><strong>Contact:</strong> 0963-237-2297</li>
+      <li><strong>Facebook Page:</strong> <a href="https://www.facebook.com/marlyndelacerna" target="_blank">Marlyn Dela Cerna</a></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Book Your Stay</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="date" name="date" required />
+      <textarea name="message" placeholder="Message or Request"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Crishamae Beach Resort | Designed by You</p>
+  </footer>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      alert('Thank you for booking! We will contact you shortly.');
+    }
+  </script>
+</body>
+</html>
